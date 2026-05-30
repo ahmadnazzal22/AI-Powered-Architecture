@@ -22,11 +22,11 @@ A futuristic AI-powered platform designed to showcase intelligent workflows, mod
 
 # 📌 Overview
 
-**AI Powered Architecture** is a modern web-based platform that demonstrates how intelligent systems, AI tools, and advanced user experiences can be organized within a unified architectural framework.
+**AI Powered Architecture** is a modern web project designed to provide a premium AI-inspired experience through a sleek dark interface, responsive design, and interactive components.
 
-The project combines a premium dark-themed design, responsive layouts, and modular structure to create a professional environment for exploring AI-driven concepts and workflows.
+The project combines a landing page, intelligent workspace, and deployment status interface within a unified architecture focused on simplicity, usability, and modern design.
 
-
+---
 
 # ✨ Features
 
@@ -54,7 +54,7 @@ The project combines a premium dark-themed design, responsive layouts, and modul
 
 * Landing page
 * Main workspace
-* Status / deployment page
+* Deployment status page
 
 ---
 
@@ -74,7 +74,7 @@ The project combines a premium dark-themed design, responsive layouts, and modul
 # 📂 Project Structure
 
 ```text
-AI-HUB/
+AI-Powered-Architecture/
 │
 ├── landing.html
 ├── index.html
@@ -94,9 +94,9 @@ AI-HUB/
 ## Clone Repository
 
 ```bash
-git clone https://github.com/your-username/AI-HUB.git
+git clone https://github.com/your-username/AI-Powered-Architecture.git
 
-cd AI-HUB
+cd AI-Powered-Architecture
 ```
 
 ---
@@ -126,7 +126,7 @@ No additional dependencies are required.
 ```text
 Landing Page
       ↓
-Main Workspace
+AI Workspace
       ↓
 Tools & Modules
       ↓
@@ -137,11 +137,11 @@ Deployment Status
 
 # 📋 Pages
 
-| Page         | Description              |
-| ------------ | ------------------------ |
-| landing.html | Main landing page        |
-| index.html   | Main workspace           |
-| ended.html   | Deployment / status page |
+| Page         | Description            |
+| ------------ | ---------------------- |
+| landing.html | Main landing page      |
+| index.html   | Main workspace         |
+| ended.html   | Deployment status page |
 
 ---
 
@@ -153,14 +153,17 @@ Deployment Status
 ![Preview](images/preview.png)
 ```
 
+> Add your screenshots later inside the `images` folder.
+
 ---
 
 # 🎯 Goals
 
-* Create a modern AI-themed experience
-* Demonstrate advanced frontend design
+* Create a modern AI-powered experience
+* Demonstrate advanced frontend architecture
 * Provide a clean and responsive interface
 * Showcase futuristic UI concepts
+* Build a scalable project structure
 
 ---
 
@@ -168,10 +171,11 @@ Deployment Status
 
 * AI integrations
 * API connectivity
-* Dark / Light mode toggle
 * Dashboard widgets
 * Authentication system
+* Dark / Light mode toggle
 * Multi-language support
+* Advanced analytics modules
 
 ---
 
