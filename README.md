@@ -27,33 +27,6 @@ A futuristic AI-powered platform designed to showcase intelligent workflows, mod
 The project combines a premium dark-themed design, responsive layouts, and modular structure to create a professional environment for exploring AI-driven concepts and workflows.
 
 
-<div align="center">
-
-<img src="https://img.shields.io/badge/AI-Hub-gold?style=for-the-badge" />
-<img src="https://img.shields.io/badge/Frontend-HTML5-orange?style=for-the-badge&logo=html5" />
-<img src="https://img.shields.io/badge/Styling-TailwindCSS-38BDF8?style=for-the-badge&logo=tailwind-css" />
-<img src="https://img.shields.io/badge/JavaScript-ES6-yellow?style=for-the-badge&logo=javascript" />
-<img src="https://img.shields.io/badge/Responsive-Yes-success?style=for-the-badge" />
-<img src="https://img.shields.io/badge/Status-Active-brightgreen?style=for-the-badge" />
-
-<br>
-<br>
-
-### 🚀 Modern AI Workspace & Landing Experience
-
-A futuristic AI-themed dashboard and landing page built with modern web technologies, responsive layouts, and immersive user interactions.
-
-</div>
-
----
-
-# 📌 Overview
-
-**AI HUB** is a modern web project designed to provide a premium AI-inspired experience through a sleek dark interface, responsive design, and interactive components.
-
-The project includes a landing page, workspace interface, and deployment status page connected through a smooth navigation flow.
-
----
 
 # ✨ Features
 
