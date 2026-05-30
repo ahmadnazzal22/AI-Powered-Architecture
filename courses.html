@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Modern AI SaaS Landing Page</title>
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;700;800&display=swap" rel="stylesheet">
+
+  <style>
+    /* المتغيرات الأساسية للألوان والأبعاد */
+    :root {
+      --bg: #070b14;
+      --card: #101827;
+      --cyan: #00f5ff;
+      --blue: #4f7cff;
+      --text: #ffffff;
+      --text-muted: #8a99ad;
+    }
+
+    /* إعدادات الصفحة العامة */
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+    }
+
+    body {
+      background: 
+        radial-gradient(circle at 15% 20%, rgba(0, 245, 255, 0.12), transparent 35%),
+        radial-gradient(circle at 85% 75%, rgba(79, 124, 255, 0.15), transparent 40%),
+        var(--bg);
+      color: var(--text);
+      min-height: 100vh;
+      overflow-x: hidden;
+      line-height: 1.6;
+    }
+
+    /* حاوية الصفحة لضمان تناسق الأبعاد */
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    /* -------------------------------------- */
+    /* 1. قسم الـ HERO */
+    /* -------------------------------------- */
+    .hero {
+      text-align: center;
+      padding: 120px 0 60px 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+
+    /* شارة الـ Badge الذكية */
+    .hero .badge {
+      background: rgba(0, 245, 255, 0.06);
+      border: 1px solid rgba(0, 245, 255, 0.2);
+      padding: 8px 18px;
+      border-radius: 100px;
+      font-size: 14px;
+      font-weight: 600;
+      color: var(--cyan);
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      margin-bottom: 28px;
+      box-shadow: 0 0 20px rgba(0, 245, 255, 0.1);
+      animation: pulse 2s infinite alternate;
+    }
+
+    /* العنوان الرئيسي الهجومي */
+    .hero h1 {
+      font-size: clamp(36px, 5vw, 64px);
+      font-weight: 800;
+      line-height: 1.15;
+      max-width: 850px;
+      margin-bottom: 24px;
+      letter-spacing: -1px;
+      background: linear-gradient(to right, #ffffff 40%, #a5b4fc 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    /* الوصف النصي */
+    .hero p {
+      font-size: clamp(16px, 2vw, 19px);
+      color: var(--text-muted);
+      max-width: 600px;
+      margin-bottom: 40px;
+    }
+
+    /* أزرار الـ CTA */
+    .buttons {
+      display: flex;
+      gap: 16px;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    /* الزر الرئيسي الاحترافي المتوهج */
+    .btn {
+      display: inline-block;
+      text-decoration: none;
+      background: linear-gradient(135deg, var(--cyan), var(--blue));
+      color: #000000; /* تباين ممتاز للقراءة */
+      padding: 16px 36px;
+      border-radius: 14px;
+      font-weight: 700;
+      font-size: 16px;
+      border: none;
+      cursor: pointer;
+      box-shadow: 0 0 25px rgba(0, 245, 255, 0.35);
+      transition: .3s cubic-bezier(0.2, 0.8, 0.2, 1);
+    }
+
+    .btn:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 0 35px rgba(0, 245, 255, 0.5);
+      color: #000000;
+    }
+
+    /* الزر الثانوي */
+    .btn-secondary {
+      background: rgba(255, 255, 255, 0.03);
+      color: var(--text);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(10px);
+      box-shadow: none;
+    }
+
+    .btn-secondary:hover {
+      background: rgba(255, 255, 255, 0.08);
+      border-color: rgba(255, 255, 255, 0.2);
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    }
+
+    /* -------------------------------------- */
+    /* 2. قسم الإحصائيات (Stats) */
+    /* -------------------------------------- */
+    .stats {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 24px;
+      padding: 40px 0;
+    }
+
+    /* تأثير الـ Glassmorphic على البطاقات */
+    .card {
+      background: rgba(255, 255, 255, 0.02);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      border: 1px solid rgba(255, 255, 255, 0.06);
+      border-radius: 24px;
+      padding: 32px 24px;
+      text-align: center;
+      transition: .4s cubic-bezier(0.2, 0.8, 0.2, 1);
+    }
+
+    /* تأثير الـ 3D Hover المطور */
+    .card:hover {
+      transform: perspective(1000px) rotateX(6deg) rotateY(6deg) translateY(-10px);
+      background: rgba(255, 255, 255, 0.04);
+      border-color: rgba(0, 245, 255, 0.3);
+      box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4), 0 0 25px rgba(0, 245, 255, 0.05);
+    }
+
+    .card h2 {
+      font-size: 48px;
+      font-weight: 800;
+      background: linear-gradient(135deg, #ffffff, var(--cyan));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      margin-bottom: 8px;
+    }
+
+    .card span {
+      font-size: 15px;
+      color: var(--text-muted);
+      font-weight: 500;
+    }
+
+    /* -------------------------------------- */
+    /* 3. قسم لوحة التحكم المحاكية (Dashboard Terminal) */
+    /* -------------------------------------- */
+    .dashboard {
+      padding: 60px 0 120px 0;
+    }
+
+    /* نافذة الكود الاحترافية */
+    .terminal {
+      background: rgba(10, 16, 30, 0.7);
+      backdrop-filter: blur(16px);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      border-radius: 20px;
+      padding: 30px;
+      font-family: 'Courier New', Courier, monospace;
+      font-size: 15px;
+      line-height: 2;
+      color: #a5b4fc;
+      position: relative;
+      box-shadow: 0 30px 60px rgba(0, 0, 0, 0.4), inset 0 1px 0 rgba(255,255,255,0.1);
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    /* نقاط التحكم العلوية للنظام للواقعية */
+    .terminal::before {
+      content: '';
+      position: absolute;
+      top: 14px;
+      left: 20px;
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background: #ff5f56;
+      box-shadow: 20px 0 0 #ffbd2e, 40px 0 0 #27c93f;
+    }
+
+    /* تهيئة الأسطر وحركتها */
+    .terminal-content {
+      margin-top: 15px;
+    }
+
+    .line {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      opacity: 0;
+      transform: translateX(-10px);
+      animation: fadeInLine 0.5s ease forwards;
+    }
+
+    /* محاكاة علامة الصح الخضراء المضيئة */
+    .line .check {
+      color: var(--cyan);
+      font-weight: bold;
+      text-shadow: 0 0 10px rgba(0, 245, 255, 0.5);
+    }
+
+    /* تتابع ظهور الأسطر بشكل رائع */
+    .line:nth-child(1) { animation-delay: 0.3s; }
+    .line:nth-child(2) { animation-delay: 0.9s; }
+    .line:nth-child(3) { animation-delay: 1.5s; }
+    .line:nth-child(4) { animation-delay: 2.1s; }
+    .line:nth-child(5) { animation-delay: 2.7s; }
+
+    /* -------------------------------------- */
+    /* الانيميشن والحركات (Animations) */
+    /* -------------------------------------- */
+    @keyframes pulse {
+      0% { box-shadow: 0 0 15px rgba(0, 245, 255, 0.08); }
+      100% { box-shadow: 0 0 25px rgba(0, 245, 255, 0.25); border-color: rgba(0, 245, 255, 0.4); }
+    }
+
+    @keyframes fadeInLine {
+      to {
+        opacity: 1;
+        transform: translateX(0);
+      }
+    }
+
+    /* التجاوب مع الشاشات الصغيرة */
+    @media (max-width: 768px) {
+      .hero { padding: 80px 0 40px 0; }
+      .dashboard { padding: 40px 0 80px 0; }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    
+    <section class="hero">
+      <div class="badge">
+        AI Powered Architecture
+      </div>
+      <h1>
+        Transform Complex Code <br>Into Clean Architecture
+      </h1>
+      <p>
+        Analyze, optimize and deploy software systems with intelligent automation.
+      </p>
+      <div class="buttons">
+        <a href="index.html" class="btn">Get Started</a>
+        <button class="btn btn-secondary">Live Demo</button>
+      </div>
+    </section>
+
+    <section class="stats">
+      <div class="card">
+        <h2>98%</h2>
+        <span>Code Quality</span>
+      </div>
+      <div class="card">
+        <h2>42%</h2>
+        <span>Performance Boost</span>
+      </div>
+      <div class="card">
+        <h2>13x</h2>
+        <span>Faster Refactoring</span>
+      </div>
+    </section>
+
+    <section class="dashboard">
+      <div class="terminal">
+        <div class="terminal-content">
+          <div class="line"><span class="check">✓</span> Structure Analyzed</div>
+          <div class="line"><span class="check">✓</span> Dependencies Optimized</div>
+          <div class="line"><span class="check">✓</span> Dead Code Removed</div>
+          <div class="line"><span class="check">✓</span> Performance Increased</div>
+          <div class="line"><span class="check">✓</span> Ready To Deploy</div>
+        </div>
+      </div>
+    </section>
+
+  </div>
+
+</body>
+</html>

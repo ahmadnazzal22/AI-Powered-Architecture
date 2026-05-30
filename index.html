@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>AI Compass — Find the Best AI Tools</title>
+  <link rel="stylesheet" href="style.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Tajawal:wght@300;400;500;700&display=swap" rel="stylesheet"/>
+</head>
+<body>
+
+  <div class="bg-grid"></div>
+  <div class="bg-glow g1"></div>
+  <div class="bg-glow g2"></div>
+  <div class="bg-glow g3"></div>
+
+  <header class="header">
+    <div class="header-inner">
+      <div class="logo">
+        <span class="logo-icon">⚡</span>
+        <span class="logo-text">AI  <strong>Powered Architecture</strong></span>
+      </div>
+      <div class="header-actions">
+        <button class="lang-btn" id="langToggle" onclick="toggleLang()">🌐 عربي</button>
+        <a href="#submit" class="submit-btn">+ Submit Tool</a>
+      </div>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="hero-badge"><span>🚀</span> <span data-en="105+ AI Tools Curated" data-ar="أكثر من 105 أداة AI منتقاة">105+ AI Tools Curated</span></div>
+    <h1 class="hero-title">
+      <span data-en="Your Complete Guide to" data-ar="دليلك الشامل لـ">Your Complete Guide to</span><br/>
+      <span class="gradient-text" data-en="AI Tools" data-ar="أدوات الذكاء الاصطناعي">AI Tools</span>
+    </h1>
+    <p class="hero-sub" data-en="Discover the best free and paid AI tools, organized by category." data-ar="اكتشف أفضل أدوات AI المجانية والمدفوعة، منظّمة حسب الفئة.">
+      Discover the best free and paid AI tools, organized by category.
+    </p>
+    <div class="search-wrap">
+      <span class="search-icon">🔍</span>
+      <input type="text" id="searchInput" class="search-input"
+        placeholder="Search AI tools..."
+        data-placeholder-en="Search AI tools..."
+        data-placeholder-ar="ابحث عن أدوات AI..."
+        oninput="filterTools()"/>
+      <span class="search-clear" id="searchClear" onclick="clearSearch()">✕</span>
+    </div>
+    <div class="stats-row">
+      <div class="stat"><span class="stat-num" id="totalCount">105</span><span class="stat-label" data-en="Total Tools" data-ar="إجمالي الأدوات">Total Tools</span></div>
+      <div class="stat-div"></div>
+      <div class="stat"><span class="stat-num" id="freeCount">0</span><span class="stat-label" data-en="Free Tools" data-ar="أدوات مجانية">Free Tools</span></div>
+      <div class="stat-div"></div>
+      <div class="stat"><span class="stat-num" id="catCount">13</span><span class="stat-label" data-en="Categories" data-ar="فئة">Categories</span></div>
+    </div>
+  </section>
+
+  <section class="filters-section">
+    <div class="filters-inner">
+      <div class="pricing-filter">
+        <button class="price-btn active" data-price="all" onclick="setPricing(this,'all')" data-en="All" data-ar="الكل">All</button>
+        <button class="price-btn" data-price="free" onclick="setPricing(this,'free')" data-en="🆓 Free" data-ar="🆓 مجاني">🆓 Free</button>
+        <button class="price-btn" data-price="freemium" onclick="setPricing(this,'freemium')" data-en="✨ Freemium" data-ar="✨ مجاني جزئي">✨ Freemium</button>
+        <button class="price-btn" data-price="paid" onclick="setPricing(this,'paid')" data-en="💎 Paid" data-ar="💎 مدفوع">💎 Paid</button>
+      </div>
+      <div class="categories-scroll" id="categoriesContainer"></div>
+    </div>
+  </section>
+
+  <section class="featured-section" id="featuredSection">
+    <div class="section-header">
+      <h2 data-en="⭐ Featured Tools" data-ar="⭐ الأدوات المميزة">⭐ Featured Tools</h2>
+    </div>
+    <div class="featured-grid" id="featuredGrid"></div>
+  </section>
+
+  <section class="tools-section">
+    <div class="section-header">
+      <h2 id="toolsSectionTitle" data-en="All AI Tools" data-ar="جميع أدوات AI">All AI Tools</h2>
+      <span class="results-count" id="resultsCount"></span>
+    </div>
+    <div class="tools-grid" id="toolsGrid"></div>
+    <div class="empty-state" id="emptyState" style="display:none">
+      <span>🔭</span>
+      <p data-en="No tools found." data-ar="لا توجد أدوات.">No tools found.</p>
+    </div>
+  </section>
+
+  <section class="submit-section" id="submit">
+    <div class="submit-inner">
+      <h2 data-en="Know a great AI tool?" data-ar="تعرف أداة AI رائعة؟">Know a great AI tool?</h2>
+      <p data-en="Submit it and we'll add it to the directory." data-ar="أرسلها وسنضيفها إلى الدليل.">Submit it and we'll add it to the directory.</p>
+      <a href="mailto:submit@aicompass.io" class="submit-cta" data-en="Submit a Tool →" data-ar="أرسل أداة →">Submit a Tool →</a>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="footer-inner">
+      <div class="footer-logo">🧭 AI Compass</div>
+      <p data-en="The most complete directory of AI tools." data-ar="أكمل دليل لأدوات الذكاء الاصطناعي.">The most complete directory of AI tools.</p>
+      <p class="footer-copy">© 2025 AI Compass · Built with ❤️ by Ahmad Nazzal</p>
+    </div>
+  </footer>
+
+  <div class="modal-overlay" id="modalOverlay" onclick="closeModal()">
+    <div class="modal" id="modal" onclick="event.stopPropagation()">
+      <button class="modal-close" onclick="closeModal()">✕</button>
+      <div class="modal-body" id="modalBody"></div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
