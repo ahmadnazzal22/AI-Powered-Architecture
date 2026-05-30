@@ -1,5 +1,5 @@
-🌌 AI HUB
-Modern AI Workspace • Tools • Experiments
+#🌌 AI HUB
+
 
 Build, explore, and interact with AI through a clean and modern web experience.
 
